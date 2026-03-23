@@ -1,0 +1,21 @@
+
+=== Belinostat ===
+  Belinostat -> Signature at depth 1..2: 7 nodes
+  Belinostat -> DifferentialExpression at depth 1..2: 0 nodes
+  Belinostat -> DifferentialExpression at depth 1..3: 5 nodes
+  Belinostat -> TranscriptomicData at depth 1..2: 6 nodes
+
+=== Vorinostat ===
+  Vorinostat -> Signature at depth 1..2: 5 nodes
+  Vorinostat -> DifferentialExpression at depth 1..2: 0 nodes
+  Vorinostat -> DifferentialExpression at depth 1..3: 0 nodes
+  Vorinostat -> DifferentialExpression at depth 1..4: 0 nodes
+  Vorinostat -> DifferentialExpression at depth 1..5: 0 nodes
+  Vorinostat -> DifferentialExpression at depth 1..6: 0 nodes
+  Vorinostat -> TranscriptomicData at depth 1..2: 1 nodes
+
+=== Dacinostat ===
+  Dacinostat -> Signature at depth 1..2: 5 nodes
+  Dacinostat -> DifferentialExpression at depth 1..2: 0 nodes
+  Dacinostat -> DifferentialExpression at depth 1..3: 5 nodes
+  Dacinostat -> TranscriptomicData at depth 1..2: 1 nodes

@@ -1,0 +1,18 @@
+--- AdverseEvents ---
+percents, grade34_counts, grade34_percents, name, counts, sae, teae
+
+--- ClinicalData ---
+bilirubin_elevation, anc, infusion_duration, clearance, source_link, half_life, creatinine_clearance_impact, ast_elevation, ae_percentage, death_count_study, sample_size, sponsor, study_design, route, male_percent, dose_reductions_required, disease_subtype, age_range, cmax, platelet_decrease, median_duration_of_response, indication, schedule, female_percent, common_ae, grade34_aes, cycle_length, ae_count, protein_binding, anc_decrease, sae_reported, name, median_age, ae_term, cr_rate_percent, supportive_care, study_id, dose_level, pr_rate_percent, platelet, orr_percent, status, median_time_to_response, alt_elevation, phase, metabolism, auc
+
+--- PreclinicalData ---
+name
+
+--- Studies ---
+name
+
+--- SafetyData ---
+hepatotoxicity_warning, total_aes, death_count, qtc_change
+
+--- Toxicokinetics ---
+measurements_html, name, study, species
+

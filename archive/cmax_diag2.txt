@@ -1,0 +1,38 @@
+
+=== direct ===
+{'t': 'HAS_CLINICAL_DATA', 'lbl': ['ClinicalData'], 'k': ['name', 'sponsor', 'study_design', 'status', 'age_range', 'median_age', 'disease_subtype', 'sample_size', 'female_percent', 'male_percent', 'schedule', 'route', 'dose_level', 'infusion_duration', 'cycle_length', 'half_life', 'clearance', 'metabolism', 'auc', 'cmax', 'median_duration_of_response', 'pr_rate_percent', 'cr_rate_percent', 'orr_percent', 'median_time_to_response', 'supportive_care', 'phase', 'study_id', 'source_link', 'indication', 'grade34_aes', 'common_ae', 'bilirubin_elevation', 'dose_reductions_required', 'platelet_decrease', 'sae_reported', 'creatinine_clearance_impact', 'protein_binding', 'alt_elevation', 'ast_elevation', 'death_count_study', 'anc_decrease']}
+{'t': 'HAS_PRECLINICAL_DATA', 'lbl': ['PreClinicalData'], 'k': ['name']}
+{'t': 'HAS_TRANSCRIPTOMIC_DATA', 'lbl': ['TranscriptomicData'], 'k': ['name']}
+
+=== pk ===
+
+=== tox ===
+
+=== tox_measure ===
+{'n': {'cmax_day5_ug_per_mL': 20.3, 'cmax_day1_ug_per_mL': 20, 'sex': 'F', 'auc_day1_ug_h_per_mL': 8.7, 'auc_day5_ug_h_per_mL': 9.8, 'auc_day151_ug_h_per_mL': 13.8, 'dose_mg_per_kg': 50, 'cmax_day151_ug_per_mL': 23.4}}
+{'n': {'cmax_day5_ug_per_mL': 18.5, 'cmax_day1_ug_per_mL': 17.7, 'sex': 'M', 'auc_day1_ug_h_per_mL': 9, 'auc_day5_ug_h_per_mL': 9.8, 'auc_day151_ug_h_per_mL': 12.5, 'dose_mg_per_kg': 50, 'cmax_day151_ug_per_mL': 21}}
+{'n': {'cmax_day5_ug_per_mL': 8.4, 'cmax_day1_ug_per_mL': 8.5, 'sex': 'F', 'auc_day1_ug_h_per_mL': 4.4, 'auc_day5_ug_h_per_mL': 4.3, 'auc_day151_ug_h_per_mL': 5.8, 'dose_mg_per_kg': 25, 'cmax_day151_ug_per_mL': 11.2}}
+{'n': {'cmax_day5_ug_per_mL': 8.3, 'cmax_day1_ug_per_mL': 10.5, 'sex': 'M', 'auc_day1_ug_h_per_mL': 4.3, 'auc_day5_ug_h_per_mL': 4.2, 'auc_day151_ug_h_per_mL': 6.1, 'dose_mg_per_kg': 25, 'cmax_day151_ug_per_mL': 10.3}}
+{'n': {'cmax_day5_ug_per_mL': 4.5, 'cmax_day1_ug_per_mL': 3.9, 'sex': 'F', 'auc_day1_ug_h_per_mL': 1.6, 'auc_day5_ug_h_per_mL': 2.3, 'auc_day151_ug_h_per_mL': 2.2, 'dose_mg_per_kg': 10, 'cmax_day151_ug_per_mL': 3.8}}
+
+=== tox_params ===
+{'n': {'name': 'Dog Toxicokinetic Parameters', 'study': 'PXD101'}}
+{'n': {'name': 'Rat Toxicokinetic Parameters', 'study': 'PXD101'}}
+
+=== exposure ===
+{'n': {'name': 'Dog Exposure'}}
+{'n': {'name': 'Rat Exposure'}}
+
+=== exposure_m ===
+{'n': {'auc_ug_h_per_mL': 12.5, 'dose_mg_per_kg': 50, 'species': 'Dog', 'day': 151, 'cmax_ug_per_mL': 21, 'sex': 'M'}}
+{'n': {'auc_ug_h_per_mL': 9, 'dose_mg_per_kg': 50, 'species': 'Dog', 'day': 1, 'cmax_ug_per_mL': 17.7, 'sex': 'M'}}
+{'n': {'auc_ug_h_per_mL': 6.1, 'dose_mg_per_kg': 25, 'species': 'Dog', 'day': 151, 'cmax_ug_per_mL': 10.3, 'sex': 'M'}}
+{'n': {'auc_ug_h_per_mL': 4.3, 'dose_mg_per_kg': 25, 'species': 'Dog', 'day': 1, 'cmax_ug_per_mL': 10.5, 'sex': 'M'}}
+{'n': {'auc_ug_h_per_mL': 2.7, 'dose_mg_per_kg': 10, 'species': 'Dog', 'day': 151, 'cmax_ug_per_mL': 4.2, 'sex': 'M'}}
+
+=== prec_study ===
+{'n': {'loael': 5, 'strain': 'Beagle', 't_half': 16.5, 'ast': 108, 'noael': 1.5, 'tmax': 2, 'sex': 'F', 'alt': 124, 'source': 'https://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/205353Orig1s000PharmR.pdf', 'auc': 1190, 'cmax': 295, 'drug': 'Panobinostat', 'primary_histopath': 'Thyroid atrophy', 'dose': 1.5, 'route': 'PO', 'adverse_events': ['Malignant neoplasm progression', 'Diarrhoea', 'Platelet count decreased', 'Death', 'Thrombocytopenia', 'Plasma cell myeloma', 'Plasmacytoma'], 'species': 'Dog'}}
+{'n': {'loael': 5, 'strain': 'Beagle', 't_half': 15.5, 'ast': 95, 'noael': 1.5, 'tmax': 2, 'sex': 'M', 'alt': 112, 'source': 'https://www.accessdata.fda.gov/drugsatfda_docs/nda/2015/205353Orig1s000PharmR.pdf', 'auc': 1290, 'cmax': 325, 'drug': 'Panobinostat', 'primary_histopath': 'Testicular atrophy', 'dose': 1.5, 'route': 'PO', 'adverse_events': ['Diarrhoea', 'Platelet count decreased', 'Malignant neoplasm progression', 'Morganella infection', 'Bronchial haemorrhage', 'Thrombocytopenia'], 'species': 'Dog'}}
+{'n': {'loael': 25, 'strain': 'Beagle', 't_half': 5, 'ast': 69, 'noael': 10, 'tmax': 1.5, 'sex': 'F', 'alt': 79, 'source': 'PubChem-49855250', 'auc': 1290, 'cmax': 195, 'drug': 'Pracinostat', 'primary_histopath': 'GI hemorrhage', 'dose': 10, 'route': 'PO', 'species': 'Dog'}}
+{'n': {'loael': 25, 'strain': 'Beagle', 't_half': 4.6, 'ast': 62, 'noael': 10, 'tmax': 1.5, 'sex': 'M', 'alt': 74, 'source': 'PubChem-49855250', 'auc': 1410, 'cmax': 225, 'drug': 'Pracinostat', 'primary_histopath': 'GI hemorrhage', 'dose': 10, 'route': 'PO', 'species': 'Dog'}}
+{'n': {'loael': 15, 'strain': 'Sprague-Dawley', 't_half': 1.3, 'ast': 102, 'noael': 5, 'tmax': 0.08, 'sex': 'F', 'alt': 89, 'source': 'ChEMBL817', 'auc': 1090, 'cmax': 265, 'drug': 'Dacinostat', 'primary_histopath': 'Body weight loss', 'dose': 10, 'route': 'IV', 'species': 'Rat'}}

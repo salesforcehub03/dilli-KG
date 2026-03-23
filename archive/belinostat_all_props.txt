@@ -1,0 +1,767 @@
+Total paths: 243
+
+=== Drug ===
+Keys: ['iupac_name', 'drug_name', 'smiles', 'h_donor', 'h_acceptor', 'tpsa', 'chembl_id', 'molecular_weight', 'logp', 'cid']
+Sample: {
+  "iupac_name": "N-hydroxy-3-[3-(phenylsulfamoyl)phenyl]prop-2-enamide",
+  "drug_name": "Belinostat",
+  "smiles": "C1=CC=C(C=C1)NS(=O)(=O)C2=CC=CC(=C2)C=CC(=O)NO",
+  "h_donor": "3",
+  "h_acceptor": "5",
+  "tpsa": "104",
+  "chembl_id": "CHEMBL408513",
+  "molecular_weight": "318.3",
+  "logp": "1.7",
+  "cid": "53437714"
+}
+
+=== Drug ===
+Keys: ['drug_name']
+Sample: {
+  "drug_name": "Vorinostat"
+}
+
+=== TranscriptomicData ===
+Keys: ['name']
+Sample: {
+  "name": "Vorinostat LINCS Transcriptomic Data"
+}
+
+=== Signature ===
+Keys: ['signature_id', 'stitch_id', 'lincspertid', 'cell_line', 'gene_targets', 'concentration', 'tissue', 'time', 'perturbagen_id', 'pubchem_id']
+Sample: {
+  "signature_id": "LINCSCP_112391",
+  "stitch_id": "CID5311",
+  "lincspertid": "LSM-3828",
+  "cell_line": "HEPG2",
+  "gene_targets": "['HDAC1', 'HDAC2', 'HDAC3', 'HDAC6', 'HDAC8']",
+  "concentration": "1.11uM",
+  "tissue": "liver",
+  "time": "24h",
+  "perturbagen_id": "BRD-K81418486",
+  "pubchem_id": "5311"
+}
+
+=== PreClinicalData ===
+Keys: ['name']
+Sample: {
+  "name": "Vorinostat Pre-Clinical Data"
+}
+
+=== PreclinicalStudy ===
+Keys: ['loael', 'strain', 't_half', 'ast', 'noael', 'tmax', 'sex', 'alt', 'source', 'auc', 'cmax', 'drug', 'primary_histopath', 'dose', 'route', 'adverse_events', 'species']
+Sample: {
+  "loael": "160",
+  "strain": "Beagle",
+  "t_half": "1.6",
+  "ast": "81",
+  "noael": "60",
+  "tmax": "1.5",
+  "sex": "F",
+  "alt": "94",
+  "source": "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2006/021991s000_Zolinza_Pharm",
+  "auc": "1790",
+  "cmax": "398",
+  "drug": "Vorinostat",
+  "primary_histopath": "GI mucosal thinning",
+  "dose": "60",
+  "route": "PO",
+  "adverse_events": "[]",
+  "species": "Dog"
+}
+
+=== ClinicalData ===
+Keys: ['sponsor', 'pr_rate_percent', 'common_ae', 'grade34_aes', 'study_id', 'male_percent', 'cmax', 'age_range', 'sample_size', 'infusion_duration', 'clearance', 'bilirubin_elevation', 'orr_percent', 'dose_reductions_required', 'phase', 'platelet_decrease', 'median_age', 'sae_reported', 'median_duration_of_response', 'creatinine_clearance_impact', 'protein_binding', 'cr_rate_percent', 'median_time_to_response', 'auc', 'source_link', 'schedule', 'supportive_care', 'alt_elevation', 'ast_elevation', 'death_count_study', 'route', 'half_life', 'disease_subtype', 'dose_level', 'study_design', 'anc_decrease', 'name', 'cycle_length', 'metabolism', 'indication', 'female_percent', 'status']
+Sample: {
+  "sponsor": "Merck",
+  "pr_rate_percent": "28",
+  "common_ae": "Fatigue, nausea",
+  "grade34_aes": "Hematologic",
+  "study_id": "Phase II CTCL Trial",
+  "male_percent": "60",
+  "cmax": "\u22481.2 \u00b5M",
+  "age_range": "18\u201385",
+  "sample_size": "74",
+  "infusion_duration": "NA",
+  "clearance": "Not fully reported",
+  "bilirubin_elevation": "Rare",
+  "orr_percent": "30",
+  "dose_reductions_required": "Yes (hematologic)",
+  "phase": "II",
+  "platelet_decrease": "Thrombocytopenia common",
+  "median_age": "60",
+  "sae_reported": "Yes",
+  "median_duration_of_response": "Not consistently reported",
+  "creatinine_clearance_impact": "Minimal impact",
+  "protein_binding": "\u224871%",
+  "cr_rate_percent": "2",
+  "median_time_to_response": "\u22488 weeks",
+  "auc": "\u22486.0 \u00b5M\u00b7hr",
+  "source_link": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2018/021991s009lbl.pdf",
+  "schedule": "Once daily",
+  "supportive_care": "Growth factors, transfusions",
+  "alt_elevation": "Observed",
+  "ast_elevation": "Observed",
+  "death_count_study": "Low",
+  "route": "Oral",
+  "half_life": "\u22482 hrs",
+  "disease_subtype": "Cutaneous T-cell Lymphoma",
+  "dose_level": "400 mg",
+  "study_design": "Single-arm, multicenter",
+  "anc_decrease": "Neutropenia observed",
+  "name": "Vorinostat Clinical Data",
+  "cycle_length": "28 days",
+  "metabolism": "Glucuronidation, hydrolysis",
+  "indication": "CTCL",
+  "female_percent": "40",
+  "status": "Completed"
+}
+
+=== DifferentialExpression ===
+Keys: ['p_value', 'logFC', 'gene_id', 'gene_symbol']
+Sample: {
+  "p_value": "0.03423",
+  "logFC": "-2.39774",
+  "gene_id": "39",
+  "gene_symbol": "ACAT2"
+}
+
+=== Signature ===
+Keys: ['signature_id', 'stitch_id', 'lincspertid', 'cell_line', 'concentration', 'tissue', 'time', 'perturbagen_id', 'pubchem_id']
+Sample: {
+  "signature_id": "LINCSCP_112464",
+  "stitch_id": "CID49855250",
+  "lincspertid": "LSM-43290",
+  "cell_line": "HEPG2",
+  "concentration": "0.37uM",
+  "tissue": "liver",
+  "time": "24h",
+  "perturbagen_id": "BRD-K86797399",
+  "pubchem_id": "49855250"
+}
+
+=== PreclinicalStudy ===
+Keys: ['loael', 'strain', 't_half', 'ast', 'noael', 'tmax', 'sex', 'alt', 'source', 'auc', 'cmax', 'drug', 'primary_histopath', 'dose', 'route', 'species']
+Sample: {
+  "loael": "25",
+  "strain": "Beagle",
+  "t_half": "5",
+  "ast": "69",
+  "noael": "10",
+  "tmax": "1.5",
+  "sex": "F",
+  "alt": "79",
+  "source": "PubChem-49855250",
+  "auc": "1290",
+  "cmax": "195",
+  "drug": "Pracinostat",
+  "primary_histopath": "GI hemorrhage",
+  "dose": "10",
+  "route": "PO",
+  "species": "Dog"
+}
+
+=== ClinicalData ===
+Keys: ['phase', 'sponsor', 'ae_term', 'median_duration_of_response', 'grade34_aes', 'source_link', 'schedule', 'supportive_care', 'route', 'disease_subtype', 'dose_level', 'study_design', 'anc', 'name', 'cycle_length', 'orr_percent', 'indication', 'status']
+Sample: {
+  "phase": "Phase II",
+  "sponsor": "MEI Pharma",
+  "ae_term": "Infections / Cytopenias",
+  "median_duration_of_response": "Median OS 19.1 mo; PFS 12.6 mo",
+  "grade34_aes": "Grade \u22653 reported",
+  "source_link": "https://pubmed.ncbi.nlm.nih.gov/30760466/",
+  "schedule": "3x weekly",
+  "supportive_care": "Supportive care required",
+  "route": "Oral",
+  "disease_subtype": "Older unfit AML",
+  "dose_level": "60 mg",
+  "study_design": "Interventional",
+  "anc": "Neutropenia / Thrombocytopenia",
+  "name": "Pracinostat Clinical Data",
+  "cycle_length": "28-day cycle",
+  "orr_percent": "42%",
+  "indication": "Acute Myeloid Leukemia",
+  "status": "Completed"
+}
+
+=== ClinicalData ===
+Keys: ['phase', 'sponsor', 'ae_term', 'study_id', 'source_link', 'schedule', 'route', 'sample_size', 'dose_level', 'study_design', 'name', 'cycle_length', 'indication', 'status']
+Sample: {
+  "phase": "Phase I",
+  "sponsor": "Novartis",
+  "ae_term": "Nausea / Vomiting / Fatigue",
+  "study_id": "PMC3795372",
+  "source_link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3795372/",
+  "schedule": "Days 1\u20133",
+  "route": "Intravenous",
+  "sample_size": "39",
+  "dose_level": "IV dose escalation",
+  "study_design": "Dose escalation",
+  "name": "Dacinostat Clinical Data",
+  "cycle_length": "21-day cycle",
+  "indication": "Advanced solid tumors",
+  "status": "Completed"
+}
+
+=== ClinicalData ===
+Keys: ['phase', 'sponsor', 'ae_term', 'median_duration_of_response', 'study_id', 'source_link', 'schedule', 'supportive_care', 'ae_percentage', 'route', 'disease_subtype', 'sample_size', 'dose_level', 'study_design', 'name', 'platelet', 'cycle_length', 'indication', 'status', 'ae_count']
+Sample: {
+  "phase": "Phase I",
+  "sponsor": "Academic/Industry",
+  "ae_term": "Thrombocytopenia / Anorexia",
+  "median_duration_of_response": "Median PFS 3.1 mo; OS 8.8 mo",
+  "study_id": "PMID:29995287",
+  "source_link": "https://pubmed.ncbi.nlm.nih.gov/29995287/",
+  "schedule": "Days 1\u20135, 8\u201312",
+  "supportive_care": "Supportive care given",
+  "ae_percentage": "~69%",
+  "route": "Oral",
+  "disease_subtype": "Advanced solid tumors",
+  "sample_size": "27",
+  "dose_level": "200 mg/day",
+  "study_design": "Open-label, dose escalation",
+  "name": "Resminostat Clinical Data",
+  "platelet": "Thrombocytopenia",
+  "cycle_length": "21-day cycle",
+  "indication": "Biliary tract / Pancreatic cancer",
+  "status": "Completed",
+  "ae_count": "11"
+}
+
+=== RecommendedDose ===
+Keys: ['administration_days', 'dose', 'unit', 'route', 'infusion_duration', 'cycle_length', 'frequency']
+Sample: {
+  "administration_days": "Days 1-5",
+  "dose": "1000",
+  "unit": "mg/m\u00b2",
+  "route": "IV infusion",
+  "infusion_duration": "30 minutes",
+  "cycle_length": "21 days",
+  "frequency": "Every 21-day cycle"
+}
+
+=== DrugProductInfo ===
+Keys: ['name']
+Sample: {
+  "name": "Belinostat Drug Product Info"
+}
+
+=== SpecialPopulations ===
+Keys: ['pregnancy', 'hepatic_impairment', 'pediatric']
+Sample: {
+  "pregnancy": "Developmental toxicity warnings",
+  "hepatic_impairment": "Moderate/severe impairment excluded",
+  "pediatric": "No pediatric patients included"
+}
+
+=== Contraindications ===
+Keys: ['list', 'rationale']
+Sample: {
+  "list": "['Severe hepatic impairment', 'Hypersensitivity']",
+  "rationale": "Risk of severe toxicity in hepatic impairment and allergic reactions."
+}
+
+=== DrugInteractions ===
+Keys: ['clinical_significance', 'cyp_interactions', 'interacting_drugs']
+Sample: {
+  "clinical_significance": "Potential for increased plasma levels of co-administered drugs metabolized by CY",
+  "cyp_interactions": "Interaction with CYP3A4 enzymes.",
+  "interacting_drugs": "['5-FU', 'carboplatin', 'paclitaxel', 'bortezomib', 'docetaxel', 'erlotinib', 't"
+}
+
+=== FormulationStability ===
+Keys: ['stability_after_reconstitution', 'storage', 'type', 'excipients', 'shelf_life']
+Sample: {
+  "stability_after_reconstitution": "12 hours at ambient temperature (15\u2103-25\u2103; 59\u00baF-77\u00b0F)",
+  "storage": "20\u00ba to 25\u2103 (68\u00b0 to 77\u00baF)",
+  "type": "Lyophilized powder for injection",
+  "excipients": "['L-Arginine', 'Mannitol', 'Sodium hydroxide']",
+  "shelf_life": "36 months"
+}
+
+=== Signature ===
+Keys: ['signature_id', 'stitch_id', 'lincspertid', 'cell_line', 'gene_targets', 'concentration', 'tissue', 'time', 'perturbagen_id', 'is_exemplar', 'pubchem_id']
+Sample: {
+  "signature_id": "LINCSCP_22329",
+  "stitch_id": "CID6918638",
+  "lincspertid": "LSM-43181",
+  "cell_line": "HEPG2",
+  "gene_targets": "['HDAC1', 'HDAC2', 'HDAC3', 'HDAC4', 'HDAC5', 'HDAC6', 'HDAC7', 'HDAC8', 'HDAC9'",
+  "concentration": "10uM",
+  "tissue": "liver",
+  "time": "6h",
+  "perturbagen_id": "BRD-K17743125",
+  "is_exemplar": "True",
+  "pubchem_id": "6918638"
+}
+
+=== AdverseEvents ===
+Keys: ['name']
+Sample: {
+  "name": "Belinostat Adverse Events"
+}
+
+=== AdverseEvent ===
+Keys: ['grade34_percents', 'teae', 'sae', 'counts', 'name', 'percents', 'grade34_counts']
+Sample: {
+  "grade34_percents": "[2.3]",
+  "teae": "True",
+  "sae": "False",
+  "counts": "[13]",
+  "name": "Leukopenia",
+  "percents": "[10.1]",
+  "grade34_counts": "[3]"
+}
+
+=== SafetyEfficacy ===
+Keys: ['name']
+Sample: {
+  "name": "Belinostat Safety & Efficacy"
+}
+
+=== SubgroupEfficacy ===
+Keys: ['aitl_percent', 'ptcl_nos_percent']
+Sample: {
+  "aitl_percent": "45.5",
+  "ptcl_nos_percent": "23.4"
+}
+
+=== EfficacyOutcomes ===
+Keys: ['cr_rate_percent', 'orr_percent', 'median_time_to_response', 'median_duration_of_response', 'pr_rate_percent']
+Sample: {
+  "cr_rate_percent": "10.8",
+  "orr_percent": "25.8",
+  "median_time_to_response": "6 weeks",
+  "median_duration_of_response": "13.6 months",
+  "pr_rate_percent": "15.0"
+}
+
+=== SafetyData ===
+Keys: ['total_aes', 'death_count', 'hepatotoxicity_warning', 'qtc_change']
+Sample: {
+  "total_aes": "205",
+  "death_count": "22",
+  "hepatotoxicity_warning": "One patient died with hepatic failure, which was considered related to belinosta",
+  "qtc_change": "No significant QTc prolongation"
+}
+
+=== ClinicalChemistry ===
+Keys: ['name', 'unit', 'parameter']
+Sample: {
+  "name": "Belinostat ALT Clinical Chemistry",
+  "unit": "ALT fold-change",
+  "parameter": "Alanine Aminotransferase"
+}
+
+=== ClinicalChemistryCycle ===
+Keys: ['cycle', 'dose100_m', 'parameter', 'dose100_f']
+Sample: {
+  "cycle": "Recovery",
+  "dose100_m": "24.5",
+  "parameter": "Alanine Aminotransferase",
+  "dose100_f": "7.3"
+}
+
+=== ClinicalChemistryCycle ===
+Keys: ['dose25_m', 'dose10_m', 'parameter', 'dose100_f', 'dose25_f', 'cycle', 'dose100_m', 'dose10_f']
+Sample: {
+  "dose25_m": "25.5",
+  "dose10_m": "12.7",
+  "parameter": "Alanine Aminotransferase",
+  "dose100_f": "30.8",
+  "dose25_f": "10.2",
+  "cycle": "Cycle 8",
+  "dose100_m": "43.6",
+  "dose10_f": "0"
+}
+
+=== Species ===
+Keys: ['name']
+Sample: {
+  "name": "Dog"
+}
+
+=== Toxicity ===
+Keys: ['name']
+Sample: {
+  "name": "Dog Toxicity"
+}
+
+=== ToxicityMeasurement ===
+Keys: ['dose_mg_per_kg', 'species', 'toxicity_metric', 'value', 'sex']
+Sample: {
+  "dose_mg_per_kg": "50",
+  "species": "Dog",
+  "toxicity_metric": "Thymus_atrophy_severity",
+  "value": "1",
+  "sex": "F"
+}
+
+=== MicroscopicFindings ===
+Keys: ['name', 'study']
+Sample: {
+  "name": "Dog Microscopic Findings",
+  "study": "PXD101"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'male_25', 'female_10', 'female_25']
+Sample: {
+  "name": "Thymus - atrophy",
+  "male_25": "3a",
+  "female_10": "1a",
+  "female_25": "1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'male_50', 'male_25', 'male_10']
+Sample: {
+  "name": "Epididymis - exfoliated cells",
+  "male_50": "3b",
+  "male_25": "1a,2b",
+  "male_10": "1a,2b"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'female_10', 'female_50', 'female_25']
+Sample: {
+  "name": "Ovary findings",
+  "female_10": "1p,1p,1p",
+  "female_50": "1a",
+  "female_25": "3p,3p,2p"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'female_50']
+Sample: {
+  "name": "Cecum - lymphoid atrophy",
+  "female_50": "1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'male_25']
+Sample: {
+  "name": "Kidney - inflammatory cell foci",
+  "male_25": "1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['male_50', 'female_50', 'name', 'male_25', 'female_10', 'female_25', 'male_10']
+Sample: {
+  "male_50": "1p",
+  "female_50": "1a",
+  "name": "Lungs findings",
+  "male_25": "1p",
+  "female_10": "1a",
+  "female_25": "1p",
+  "male_10": "1p,1a,1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['name', 'female_50', 'male_25']
+Sample: {
+  "name": "Mesenteric Lymph node - atrophy - lymphangiectasis",
+  "female_50": "3a,1a",
+  "male_25": "2a"
+}
+
+=== Exposure ===
+Keys: ['name']
+Sample: {
+  "name": "Dog Exposure"
+}
+
+=== ExposureMeasurement ===
+Keys: ['auc_ug_h_per_mL', 'dose_mg_per_kg', 'species', 'day', 'cmax_ug_per_mL', 'sex']
+Sample: {
+  "auc_ug_h_per_mL": "12.5",
+  "dose_mg_per_kg": "50",
+  "species": "Dog",
+  "day": "151",
+  "cmax_ug_per_mL": "21",
+  "sex": "M"
+}
+
+=== ToxicokineticParameters ===
+Keys: ['name', 'study']
+Sample: {
+  "name": "Dog Toxicokinetic Parameters",
+  "study": "PXD101"
+}
+
+=== ToxicokineticMeasurement ===
+Keys: ['cmax_day5_ug_per_mL', 'cmax_day1_ug_per_mL', 'sex', 'auc_day1_ug_h_per_mL', 'auc_day5_ug_h_per_mL', 'auc_day151_ug_h_per_mL', 'dose_mg_per_kg', 'cmax_day151_ug_per_mL']
+Sample: {
+  "cmax_day5_ug_per_mL": "20.3",
+  "cmax_day1_ug_per_mL": "20",
+  "sex": "F",
+  "auc_day1_ug_h_per_mL": "8.7",
+  "auc_day5_ug_h_per_mL": "9.8",
+  "auc_day151_ug_h_per_mL": "13.8",
+  "dose_mg_per_kg": "50",
+  "cmax_day151_ug_per_mL": "23.4"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name']
+Sample: {
+  "phase": "Recovery",
+  "name": "Heart"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'male_0', 'name', 'female_100', 'female_0', 'male_25', 'female_10', 'male_100', 'female_25', 'male_10']
+Sample: {
+  "phase": "Terminal Sacrifice",
+  "male_0": "4a",
+  "name": "Tail lesions - phlebitis/dermatitis/edema/hemorrhage",
+  "female_100": "5a,3b",
+  "female_0": "4a,1b",
+  "male_25": "6a,1b",
+  "female_10": "4a",
+  "male_100": "3a,3b,1c",
+  "female_25": "2a,1b",
+  "male_10": "7a,1b"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_100', 'male_25', 'male_100']
+Sample: {
+  "phase": "Terminal Sacrifice",
+  "name": "Thymus - atrophy / congestion / hemorrhage",
+  "female_100": "1p",
+  "male_25": "2p",
+  "male_100": "3a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'male_100']
+Sample: {
+  "phase": "Terminal Sacrifice",
+  "name": "Testes - tubular atrophy",
+  "male_100": "1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_100', 'male_25', 'male_100', 'male_0']
+Sample: {
+  "phase": "Terminal Sacrifice",
+  "name": "Spleen - hematopoiesis",
+  "female_100": "4a,3b,1c",
+  "male_25": "5a,1b",
+  "male_100": "5a,3b",
+  "male_0": "7a,1b"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_0', 'male_0']
+Sample: {
+  "phase": "Terminal Sacrifice",
+  "name": "Heart - inflammatory cell foci",
+  "female_0": "1a",
+  "male_0": "1a"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_100', 'male_100']
+Sample: {
+  "phase": "Early Decedents",
+  "name": "Tail lesions - phlebitis/dermatitis/edema/hemorrhage",
+  "female_100": "1c,1d",
+  "male_100": "2c,1d"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_25']
+Sample: {
+  "phase": "Early Decedents",
+  "name": "Ovary - congestion/hemorrhage",
+  "female_25": "1p"
+}
+
+=== MicroscopicFinding ===
+Keys: ['phase', 'name', 'female_100', 'female_0', 'male_100']
+Sample: {
+  "phase": "Early Decedents",
+  "name": "Spleen - hematopoiesis",
+  "female_100": "1b",
+  "female_0": "1p",
+  "male_100": "1a,1b"
+}
+
+=== ExperimentalDesign ===
+Keys: ['study_type', 'name']
+Sample: {
+  "study_type": "Dose escalation toxicology",
+  "name": "Belinostat Rat Experimental Design"
+}
+
+=== ExperimentalGroup ===
+Keys: ['recovery_f', 'tk_m', 'group_number', 'terminal_m', 'tk_f', 'recovery_m', 'terminal_f', 'dose_mg_per_kg_per_day']
+Sample: {
+  "recovery_f": "5",
+  "tk_m": "8",
+  "group_number": "4",
+  "terminal_m": "10",
+  "tk_f": "8",
+  "recovery_m": "5",
+  "terminal_f": "10",
+  "dose_mg_per_kg_per_day": "100"
+}
+
+=== ToxicokineticMeasurement ===
+Keys: ['cmax_day5_ug_per_mL', 'cmax_day1_ug_per_mL', 'sex', 'auc_day1_ug_h_per_mL', 'auc_day5_ug_h_per_mL', 'auc_day151_ug_h_per_mL', 'dose_mg_per_kg', 'dose_group', 'cmax_day151_ug_per_mL']
+Sample: {
+  "cmax_day5_ug_per_mL": "23.65",
+  "cmax_day1_ug_per_mL": "23.87",
+  "sex": "F",
+  "auc_day1_ug_h_per_mL": "6.81",
+  "auc_day5_ug_h_per_mL": "7.17",
+  "auc_day151_ug_h_per_mL": "12.09",
+  "dose_mg_per_kg": "100",
+  "dose_group": "4",
+  "cmax_day151_ug_per_mL": "37.1"
+}
+
+=== ToxicokineticParameters ===
+Keys: ['species']
+Sample: {
+  "species": "Dog"
+}
+
+=== ToxicokineticMeasurement ===
+Keys: ['cmax_ug_ml_day1', 'cmax_ug_ml_day151', 'auc_0_24h_ug_h_ml_day5', 'sex', 'auc_0_24h_ug_h_ml_day1', 'auc_0_24h_ug_h_ml_day151', 'dose_mg_kg_day', 'cmax_ug_ml_day5']
+Sample: {
+  "cmax_ug_ml_day1": "20.0",
+  "cmax_ug_ml_day151": "23.4",
+  "auc_0_24h_ug_h_ml_day5": "9.8",
+  "sex": "F",
+  "auc_0_24h_ug_h_ml_day1": "8.7",
+  "auc_0_24h_ug_h_ml_day151": "13.8",
+  "dose_mg_kg_day": "50",
+  "cmax_ug_ml_day5": "20.3"
+}
+
+=== ToxicokineticMeasurement ===
+Keys: ['auc_pg_h_ml_day1', 'cmax_ug_ml_day1', 'cmax_ug_ml_day151', 'sex', 'dose_mg_kg_day', 'dose_group', 'auc_pg_h_ml_day151', 'cmax_ug_ml_day5', 'auc_pg_h_ml_day5']
+Sample: {
+  "auc_pg_h_ml_day1": "6.81",
+  "cmax_ug_ml_day1": "23.87",
+  "cmax_ug_ml_day151": "37.1",
+  "sex": "F",
+  "dose_mg_kg_day": "100",
+  "dose_group": "4",
+  "auc_pg_h_ml_day151": "12.09",
+  "cmax_ug_ml_day5": "23.65",
+  "auc_pg_h_ml_day5": "7.17"
+}
+
+=== ReproductiveToxicity ===
+Keys: ['developmental_warnings', 'warnings']
+Sample: {
+  "developmental_warnings": "Belinostat is indicated for advanced cancer treatment; reproductive studies deem",
+  "warnings": "Belinostat belongs to the histone deacetylase inhibitor class known to cause dev"
+}
+
+=== Carcinogenicity ===
+Keys: ['studies_conducted']
+Sample: {
+  "studies_conducted": "No"
+}
+
+=== Genotoxicity ===
+Keys: ['conclusion']
+Sample: {
+  "conclusion": "Belinostat is a genotoxic agent targeting rapidly dividing cells."
+}
+
+=== PreclinicalToxicology ===
+Keys: ['summary', 'species', 'target_organs']
+Sample: {
+  "summary": "Systemic exposures increase with dose; plasma levels decline rapidly with elimin",
+  "species": "['Rat', 'Dog']",
+  "target_organs": "['Liver', 'Bone marrow']"
+}
+
+=== MechanismOfAction ===
+Keys: ['description', 'cellular_effects', 'molecular_targets']
+Sample: {
+  "description": "HDAC inhibitor",
+  "cellular_effects": "Belinostat caused accumulation of acetylated histones and proteins, inducing cel",
+  "molecular_targets": "['HDAC1', 'HDAC2', 'HDAC3', 'HDAC8', 'HDAC4', 'HDAC7', 'HDAC9', 'HDAC6']"
+}
+
+=== ClinicalData ===
+Keys: ['name']
+Sample: {
+  "name": "Belinostat Clinical Data"
+}
+
+=== TreatmentManagement ===
+Keys: ['supportive_care', 'anc_nadir_threshold', 'platelet_nadir_threshold', 'dose_reductions']
+Sample: {
+  "supportive_care": "['Antiemetics', 'Growth factors']",
+  "anc_nadir_threshold": "<0.5 x 10^9/L (reduce 25%)",
+  "platelet_nadir_threshold": "<25 x 10^9/L (reduce 25%)",
+  "dose_reductions": "['1500 mg/m\u00b2', '1000 mg/m\u00b2', '750 mg/m\u00b2', '500 mg/m\u00b2', '750 mg/day']"
+}
+
+=== EligibilityCriteria ===
+Keys: ['bilirubin', 'platelet', 'alt_ast', 'creatinine_clearance', 'anc']
+Sample: {
+  "bilirubin": "<=1.5 x ULN",
+  "platelet": ">=50 x 10^9/L (to resume treatment)",
+  "alt_ast": "Monitoring required",
+  "creatinine_clearance": ">=45 mL/min/1.73 m2",
+  "anc": ">=1.0 x 10^9/L (to resume treatment)"
+}
+
+=== Pharmacokinetics ===
+Keys: ['clearance', 'metabolism', 'half_life', 'protein_binding_percent', 'auc', 'cmax']
+Sample: {
+  "clearance": "1,240 mL/min",
+  "metabolism": "UGT1A1",
+  "half_life": "1.1 hours",
+  "protein_binding_percent": "94",
+  "auc": "21,057 to 31,358 h*ng/mL (at 1,000 mg/m2)",
+  "cmax": "-1.772e-05"
+}
+
+=== StudyOverview ===
+Keys: ['name']
+Sample: {
+  "name": "Belinostat Study Overview"
+}
+
+=== DosingAdministration ===
+Keys: ['schedule', 'cycle_length', 'route', 'dose_level', 'infusion_duration']
+Sample: {
+  "schedule": "Days 1-5 q 21 days",
+  "cycle_length": "21 days",
+  "route": "IV",
+  "dose_level": "500",
+  "infusion_duration": "30 minutes"
+}
+
+=== PopulationCharacteristics ===
+Keys: ['age_range', 'median_age', 'disease_subtype', 'sample_size', 'female_percent', 'male_percent', 'disease_indication']
+Sample: {
+  "age_range": "29-81",
+  "median_age": "63.0",
+  "disease_subtype": "Relapsed or refractory PTCL",
+  "sample_size": "1186",
+  "female_percent": "46.5",
+  "male_percent": "53.5",
+  "disease_indication": "Peripheral T-Cell Lymphoma"
+}
+
+=== StudyMetadata ===
+Keys: ['sponsor', 'study_ids', 'study_phase', 'study_design', 'status']
+Sample: {
+  "sponsor": "Spectrum Pharmaceuticals",
+  "study_ids": "['CLN-19', 'CLN-20', 'SPI-BEL-103', 'SPI-BEL-1014', 'SPI-BEL-104']",
+  "study_phase": "Phase 2",
+  "study_design": "Uncontrolled, IV Monotherapy",
+  "status": "Completed"
+}
+

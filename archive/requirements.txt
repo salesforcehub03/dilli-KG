@@ -1,0 +1,13 @@
+Flask
+gunicorn
+neo4j
+python-dotenv
+requests
+google-generativeai
+reportlab
+langchain
+langchain-community
+langchain-neo4j
+langchain-google-genai
+langchain-openai
+pandas

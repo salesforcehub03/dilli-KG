@@ -1,0 +1,61 @@
+
+======= Vorinostat (Depth 4, directed) =======
+  Signature: 5 nodes
+  PreclinicalStudy: 2 nodes
+  TranscriptomicData: 1 nodes
+  PreClinicalData: 1 nodes
+  ClinicalData: 1 nodes
+
+======= Belinostat (Depth 4, directed) =======
+  Signature: 32 nodes
+  AdverseEvent: 26 nodes
+  DifferentialExpression: 25 nodes
+  ExposureMeasurement: 24 nodes
+  ToxicokineticMeasurement: 24 nodes
+  MicroscopicFinding: 23 nodes
+  PreclinicalStudy: 10 nodes
+  ToxicityMeasurement: 10 nodes
+  TranscriptomicData: 6 nodes
+  PreClinicalData: 6 nodes
+  ClinicalData: 6 nodes
+  Drug: 5 nodes
+  ClinicalChemistryCycle: 4 nodes
+  ToxicokineticParameters: 4 nodes
+  ExperimentalGroup: 4 nodes
+  Species: 2 nodes
+  Toxicity: 2 nodes
+  MicroscopicFindings: 2 nodes
+  Exposure: 2 nodes
+  RecommendedDose: 1 nodes
+  DrugProductInfo: 1 nodes
+  SpecialPopulations: 1 nodes
+  Contraindications: 1 nodes
+  DrugInteractions: 1 nodes
+  FormulationStability: 1 nodes
+  AdverseEvents: 1 nodes
+  SafetyEfficacy: 1 nodes
+  SubgroupEfficacy: 1 nodes
+  EfficacyOutcomes: 1 nodes
+  SafetyData: 1 nodes
+  ClinicalChemistry: 1 nodes
+  ExperimentalDesign: 1 nodes
+  ReproductiveToxicity: 1 nodes
+  Carcinogenicity: 1 nodes
+  Genotoxicity: 1 nodes
+  PreclinicalToxicology: 1 nodes
+  MechanismOfAction: 1 nodes
+  TreatmentManagement: 1 nodes
+  EligibilityCriteria: 1 nodes
+  Pharmacokinetics: 1 nodes
+  StudyOverview: 1 nodes
+  DosingAdministration: 1 nodes
+  PopulationCharacteristics: 1 nodes
+  StudyMetadata: 1 nodes
+
+======= Panobinostat (Depth 4, directed) =======
+  Signature: 5 nodes
+  DifferentialExpression: 5 nodes
+  PreclinicalStudy: 2 nodes
+  TranscriptomicData: 1 nodes
+  PreClinicalData: 1 nodes
+  ClinicalData: 1 nodes

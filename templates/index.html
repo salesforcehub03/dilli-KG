@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DILI Analysis Platform — Drug-Induced Liver Injury Research</title>
+    <meta name="description"
+        content="Explore drug-induced liver injury data through interactive knowledge graphs, molecular comparisons, and AI-driven insights.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --hcl-blue: #0072C6;
+            --hcl-dark: #004A8F;
+            --hcl-light: #E8F1FA;
+            --hcl-accent: #00A3E0;
+            --text-dark: #1a2b3c;
+            --text-mid: #4a5e72;
+            --text-light: #7a8ea0;
+            --border: #d8e4ef;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background: #f5f8fc;
+            color: var(--text-dark);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 60px;
+            height: 64px;
+            background: white;
+            border-bottom: 1px solid var(--border);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--hcl-blue), var(--hcl-accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .nav-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .nav-title span {
+            color: var(--hcl-blue);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--hcl-blue);
+        }
+
+        .hcl-badge {
+            padding: 5px 14px;
+            background: var(--hcl-light);
+            color: var(--hcl-blue);
+            border-radius: 6px;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+
+        /* Hero */
+        .hero {
+            background: white;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-inner {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 70px 60px 60px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: var(--hcl-light);
+            border: 1px solid #c4daef;
+            border-radius: 20px;
+            color: var(--hcl-blue);
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--text-dark);
+            margin-bottom: 18px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero h1 .blue {
+            color: var(--hcl-blue);
+        }
+
+        .hero p {
+            font-size: 1.08rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+            max-width: 620px;
+            margin: 0 auto 36px;
+        }
+
+        /* Search Box */
+        .search-box {
+            max-width: 520px;
+            margin: 0 auto 14px;
+        }
+
+        .search-box form {
+            display: flex;
+            background: white;
+            border: 2px solid var(--hcl-blue);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .search-box form:focus-within {
+            box-shadow: 0 0 0 4px rgba(0, 114, 198, 0.12);
+        }
+
+        .search-box select {
+            flex: 1;
+            padding: 14px 18px;
+            background: transparent;
+            border: none;
+            color: var(--text-dark);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            cursor: pointer;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .search-box select option {
+            padding: 10px;
+        }
+
+        .search-box button {
+            padding: 14px 26px;
+            background: linear-gradient(135deg, var(--hcl-blue), var(--hcl-accent));
+            color: white;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            white-space: nowrap;
+        }
+
+        .search-box button:hover {
+            opacity: 0.9;
+        }
+
+        .search-hint {
+            font-size: 0.82rem;
+            color: var(--text-light);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            max-width: 720px;
+            margin: 40px auto 0;
+        }
+
+        .stat {
+            flex: 1;
+            text-align: center;
+            padding: 18px 10px;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border-right: none;
+        }
+
+        .stat-num {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: var(--hcl-blue);
+        }
+
+        .stat-label {
+            font-size: 0.78rem;
+            color: var(--text-light);
+            margin-top: 2px;
+            font-weight: 500;
+        }
+
+        /* Features */
+        .section {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 56px 60px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .section .subtitle {
+            text-align: center;
+            font-size: 0.92rem;
+            color: var(--text-light);
+            margin-bottom: 36px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 26px 22px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--hcl-blue);
+            box-shadow: 0 4px 16px rgba(0, 114, 198, 0.08);
+        }
+
+        .feature-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 14px;
+            background: var(--hcl-light);
+        }
+
+        .feature-card h3 {
+            font-size: 0.98rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .feature-card p {
+            font-size: 0.84rem;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        /* Drug Cards */
+        .drug-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .drug-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 22px 20px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            text-align: left;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .drug-card:hover {
+            border-color: var(--hcl-blue);
+            box-shadow: 0 4px 16px rgba(0, 114, 198, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .drug-name {
+            font-weight: 700;
+            font-size: 1.02rem;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .drug-class {
+            font-size: 0.76rem;
+            color: var(--hcl-blue);
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .drug-desc {
+            font-size: 0.82rem;
+            color: var(--text-mid);
+            line-height: 1.55;
+        }
+
+        /* Research */
+        .research-section {
+            background: linear-gradient(135deg, var(--hcl-blue), var(--hcl-dark));
+            color: white;
+            margin-top: 10px;
+        }
+
+        .research-inner {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 56px 60px;
+            text-align: center;
+        }
+
+        .research-inner h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .research-inner p {
+            font-size: 0.92rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        .research-inner strong {
+            color: white;
+        }
+
+        .research-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 30px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .r-stat-num {
+            font-size: 1.8rem;
+            font-weight: 800;
+        }
+
+        .r-stat-label {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.65);
+            margin-top: 2px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 60px;
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            font-size: 0.78rem;
+            color: var(--text-light);
+        }
+
+        .footer a {
+            color: var(--hcl-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid,
+            .drug-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-wrap: wrap;
+            }
+
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .hero-inner,
+            .section,
+            .research-inner {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .research-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="nav-logo">🧬</div>
+            <div class="nav-title">DILI <span>Analysis Platform</span></div>
+        </div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#molecules">Molecules</a>
+            <a href="#research">Research</a>
+            <span class="hcl-badge">HCLTech</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-inner">
+            <div class="hero-tag">⚡ Drug Safety Intelligence</div>
+            <h1>Explore Drug-Induced Liver Injury with <span class="blue">Knowledge Graphs</span></h1>
+            <p>
+                Investigate HDAC inhibitor hepatotoxicity through interactive molecular graphs,
+                AI-powered insights, and side-by-side drug comparisons — backed by
+                clinical and preclinical evidence.
+            </p>
+
+            <div class="search-box">
+                <form action="/graph" method="POST">
+                    <select name="drug" required>
+                        <option value="" disabled selected>Select a molecule to explore...</option>
+                        <option value="Belinostat">Belinostat</option>
+                        <option value="Vorinostat">Vorinostat</option>
+                        <option value="Panobinostat">Panobinostat</option>
+                        <option value="Pracinostat">Pracinostat</option>
+                        <option value="Dacinostat">Dacinostat</option>
+                        <option value="Resminostat">Resminostat</option>
+                    </select>
+                    <button type="submit">Visualize & Analyze →</button>
+                </form>
+            </div>
+            <div class="search-hint">Choose a molecule above or click any card below to begin</div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-num">6</div>
+                    <div class="stat-label">HDAC Inhibitors</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">50+</div>
+                    <div class="stat-label">Properties Tracked</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">AI</div>
+                    <div class="stat-label">Powered Insights</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num">2D</div>
+                    <div class="stat-label">Structure Viewer</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="features">
+        <h2>Platform Capabilities</h2>
+        <p class="subtitle">Everything you need to assess hepatotoxicity risk across HDAC inhibitors</p>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>Knowledge Graph Explorer</h3>
+                <p>Navigate interconnected drug data — preclinical studies, clinical observations, gene signatures, and
+                    adverse events.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔬</div>
+                <h3>Drug Comparison</h3>
+                <p>Compare any two molecules side-by-side: 2D structures, molecular weight, LogP, TPSA, and DILI risk
+                    indicators.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧪</div>
+                <h3>Molecular Properties</h3>
+                <p>View enriched data from PubChem — SMILES, IUPAC names, CIDs, and computed physicochemical
+                    descriptors.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>AI Drug Assistant</h3>
+                <p>Ask context-aware questions about any property or safety signal in the graph — powered by large
+                    language models.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>Similar Molecules</h3>
+                <p>Discover structurally similar drugs with enriched properties and shared DILI risk profiles.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>PDF Reports</h3>
+                <p>Generate downloadable safety reports with graph snapshots, property summaries, and AI explanations.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Molecules -->
+    <section class="section" id="molecules" style="padding-top: 10px;">
+        <h2>Available Molecules</h2>
+        <p class="subtitle">Click any card to launch the knowledge graph explorer</p>
+        <div class="drug-grid">
+            <form action="/graph" method="POST" style="display:contents;">
+                <button type="submit" name="drug" value="Belinostat" class="drug-card">
+                    <div class="drug-name">Belinostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">FDA-approved for peripheral T-cell lymphoma. Known hepatotoxicity risk with
+                        elevated ALT/AST in clinical trials.</div>
+                </button>
+                <button type="submit" name="drug" value="Vorinostat" class="drug-card">
+                    <div class="drug-name">Vorinostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">First FDA-approved HDAC inhibitor for cutaneous T-cell lymphoma. Benchmark
+                        compound for hepatotoxicity studies.</div>
+                </button>
+                <button type="submit" name="drug" value="Panobinostat" class="drug-card">
+                    <div class="drug-name">Panobinostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">Approved for multiple myeloma. Potent pan-HDAC inhibitor with significant
+                        liver enzyme elevation in trials.</div>
+                </button>
+                <button type="submit" name="drug" value="Pracinostat" class="drug-card">
+                    <div class="drug-name">Pracinostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">Investigational agent studied in AML and MDS. Oral bioavailability with
+                        moderate hepatotoxicity profile.</div>
+                </button>
+                <button type="submit" name="drug" value="Dacinostat" class="drug-card">
+                    <div class="drug-name">Dacinostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">Experimental pan-HDAC inhibitor with potent antiproliferative activity.
+                        Limited clinical liver safety data.</div>
+                </button>
+                <button type="submit" name="drug" value="Resminostat" class="drug-card">
+                    <div class="drug-name">Resminostat</div>
+                    <div class="drug-class">HDAC Inhibitor · Pan-class</div>
+                    <div class="drug-desc">Studied in hepatocellular carcinoma and Hodgkin lymphoma. Notable for
+                        liver-related therapeutic targeting.</div>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Research -->
+    <section class="research-section" id="research">
+        <div class="research-inner">
+            <h2>Why DILI Research Matters</h2>
+            <p>
+                Drug-induced liver injury is one of the leading causes of drug attrition
+                during development and post-market withdrawal. Nearly <strong>30% of drug failures</strong>
+                in clinical trials are attributed to hepatotoxicity, costing the pharmaceutical
+                industry billions annually and posing severe patient safety risks.
+            </p>
+            <p>
+                HDAC inhibitors, while revolutionary in cancer therapy, carry a well-documented
+                risk of liver damage. This platform integrates <strong>Neo4j knowledge graphs</strong>,
+                <strong>PubChem molecular data</strong>, and <strong>AI-driven analysis</strong>
+                to help researchers identify hepatotoxicity signals early and make informed
+                decisions in drug development pipelines.
+            </p>
+
+            <div class="research-stats">
+                <div>
+                    <div class="r-stat-num">~30%</div>
+                    <div class="r-stat-label">Drug failures from liver toxicity</div>
+                </div>
+                <div>
+                    <div class="r-stat-num">#1</div>
+                    <div class="r-stat-label">Cause of post-market drug withdrawal</div>
+                </div>
+                <div>
+                    <div class="r-stat-num">$2B+</div>
+                    <div class="r-stat-label">Annual industry cost of DILI</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>DILI Analysis Platform · Powered by Neo4j, PubChem & AI · <a href="#">HCLTech</a> Drug Safety Research</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+
+Vorinostat: Directed=10, Undirected=149
+
+--- Path from Vorinostat to TranscriptomicData ---
+  Drug-[HAS_TRANSCRIPTOMIC_DATA] -> TranscriptomicData
+
+--- Path from Vorinostat to PreClinicalData ---
+  Drug-[HAS_PRECLINICAL_DATA] -> PreClinicalData
+
+Belinostat: Directed=242, Undirected=242
+
+--- Path from Belinostat to TranscriptomicData ---
+  Drug-[SIMILAR_TO] -> Drug-[HAS_TRANSCRIPTOMIC_DATA] -> TranscriptomicData
+  Drug-[SIMILAR_TO] -> Drug-[HAS_TRANSCRIPTOMIC_DATA] -> TranscriptomicData
+  Drug-[SIMILAR_TO] -> Drug-[HAS_TRANSCRIPTOMIC_DATA] -> TranscriptomicData
+
+--- Path from Belinostat to PreClinicalData ---
+  Drug-[SIMILAR_TO] -> Drug-[HAS_PRECLINICAL_DATA] -> PreClinicalData
+  Drug-[SIMILAR_TO] -> Drug-[HAS_PRECLINICAL_DATA] -> PreClinicalData
+  Drug-[SIMILAR_TO] -> Drug-[HAS_PRECLINICAL_DATA] -> PreClinicalData
+
+Panobinostat: Directed=15, Undirected=154
+
+--- Path from Panobinostat to TranscriptomicData ---
+  Drug-[HAS_TRANSCRIPTOMIC_DATA] -> TranscriptomicData
+
+--- Path from Panobinostat to PreClinicalData ---
+  Drug-[HAS_PRECLINICAL_DATA] -> PreClinicalData

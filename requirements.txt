@@ -1,0 +1,9 @@
+flask
+gunicorn
+neo4j
+requests
+python-dotenv
+rdkit
+openai
+numpy
+reportlab
